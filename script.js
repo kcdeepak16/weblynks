@@ -114,3 +114,27 @@ function expandp(s)
         }
     }
 }   
+
+function fsubmit()
+{
+    var formobj = $('form').serializeArray();
+    var formdata = {};
+    $.each(formobj,
+    function(i, v) {
+        formdata[v.name] = v.value;
+    });
+    console.log(formdata);
+    $.ajax({
+        url: "http://127.0.0.1:8000/queries/",
+        type: "POST",
+        contentType: "application/json",
+        headers: {'Access-Control-Allow-Origin':'*'},
+        data: formdata,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function(error){
+            console.log("Something went wrong", error);
+        }
+    });
+}
