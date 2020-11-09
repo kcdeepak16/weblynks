@@ -78,7 +78,7 @@ span {
   color: white;
   font-size: 1.8rem;
   position: absolute;
-  top: 22rem;
+  top: 25rem;
   width: 100%;
   text-align: center;
 }
@@ -171,10 +171,8 @@ navbar ul li a:hover
 .carousel {
 	height: 100% !important;
 	perspective: 800px;
-    float: right;
     display: inline-block;
     position: absolute;
-    width: 80% !important;
 }
 
 .carousel .carousel-item {
@@ -373,6 +371,16 @@ form input, #service
     font-size: 1.5rem;
     color: white;
 }
+footer
+{
+    height: 40vh;
+    background: #02bdbc;
+}
+.footer_div
+{
+    width: 33%;
+    margin: 0 1rem;
+}
 @media screen and (max-height: 450px) {
   .overlay {overflow-y: auto;}
   .overlay a {font-size: 20px}
@@ -381,6 +389,13 @@ form input, #service
   top: 15px;
   right: 35px;
   }
+}
+@media screen and (min-width: 1500px)
+{
+    html
+    {
+        font-size: 125% !important;
+    }
 }
 @media screen and (max-width: 800px)
 {
@@ -458,6 +473,10 @@ form input, #service
     .pc
     {   
         visibility: hidden;
+    }
+    #fifth_block
+    {
+        height: 120vh;
     }
     form
     {
