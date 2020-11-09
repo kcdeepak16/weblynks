@@ -155,16 +155,16 @@ Suspendisse potenti. In facilisis, nulla varius semper commodo, augue nunc eleif
     </div>
     <div id = "fifth_block">
         <h1>CONTACT US</h1>
-        <form>
+        <form action = "javascript:void(0)" onSubmit = "fsubmit()">
             <div class = "form_block">
                 <label class = "browser-default" for = "fname">Name</label><br>
-                <input class = "browser-default" type = "text" id = "fname" type = "text" name = "fname"><br><br>
+                <input class = "browser-default" type = "text" id = "fname" name = "fname"><br><br>
                 <label class = "browser-default" for = "email">Email</label><br>
                 <input class = "browser-default" id = "email" type = "text" name = "email">
             </div>
             <div class = "form_block">
             <label class = "browser-default" for = "number">Number</label><br>
-            <input class = "browser-default" for = "number" type = "text" id = "number"><br><br>
+            <input class = "browser-default" id = "number" type = "text" name = "number"><br><br>
             <label  class = "browser-default" for = "service">Service</label><br>
             <select class = "browser-default" style = "display: block;" id = "service" name = "service">
                 <option class = "browser-default" value = "web_solutions">Web Solutions</option>
@@ -177,6 +177,7 @@ Suspendisse potenti. In facilisis, nulla varius semper commodo, augue nunc eleif
                 <textarea style = "width: 95%;float: left;" class = "browser-default" type = "textarea" id = "details" name = details></textarea>
             </div>
             <br>
+            <p id = "response" style = "opacity: 0; height: 1rem;"></p>
             <button type = "submit" id = "submitbtn">SUBMIT</button>
         </form> 
     </div>

@@ -114,3 +114,31 @@ function expandp(s)
         }
     }
 }   
+
+function fsubmit()
+{
+    var formobj = $('form').serializeArray();
+    var formdata = {};
+    $.each(formobj,
+    function(i, v) {
+        formdata[v.name] = v.value;
+    });
+    console.log(JSON.stringify(formdata));
+    $.ajax({
+        url: "http://127.0.0.1:8000/queries/",
+        type: "POST",
+        contentType: "application/json",
+        headers: {'Access-Control-Allow-Origin':'*'},
+        data: JSON.stringify(formdata),
+        success: function (response) {
+            $("#response").html("Thank you for taking out time and filling the form.<br> We have recorded your response and will be contacting you within a day or two");
+            $('#response').css({'color':'#195f91'});
+            $("#response").animate({'opacity':'1'});
+        },
+        error: function(error){
+            $("#response").html("Something went wrong. <br> Please try again.");
+            $('#response').css({'color': '#D14'});
+            $("#response").animate({'opacity':'1'});
+        }
+    });
+}
