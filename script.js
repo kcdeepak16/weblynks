@@ -131,10 +131,14 @@ function fsubmit()
         headers: {'Access-Control-Allow-Origin':'*'},
         data: JSON.stringify(formdata),
         success: function (response) {
-            console.log(response);
+            $("#response").html("Thank you for taking out time and filling the form.<br> We have recorded your response and will be contacting you within a day or two");
+            $('#response').css({'color':'#195f91'});
+            $("#response").animate({'opacity':'1'});
         },
         error: function(error){
-            console.log("Something went wrong", error);
+            $("#response").html("Something went wrong. <br> Please try again.");
+            $('#response').css({'color': '#D14'});
+            $("#response").animate({'opacity':'1'});
         }
     });
 }
