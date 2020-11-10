@@ -125,7 +125,7 @@ function fsubmit()
     });
     console.log(JSON.stringify(formdata));
     $.ajax({
-        url: "http://127.0.0.1:8000/queries/",
+        url: "http://172.105.52.119/queries/",
         type: "POST",
         contentType: "application/json",
         headers: {'Access-Control-Allow-Origin':'*'},
