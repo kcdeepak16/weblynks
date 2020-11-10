@@ -73,7 +73,7 @@ span {
 }
 .glow {
   opacity: 0;
-  font-family: 'Arvo', serif;
+  font-family: PBold;
   font-weight: 300;
   color: white;
   font-size: 1.8rem;
@@ -382,7 +382,7 @@ form input, #service
 }
 footer
 {
-    height: 50vh;
+    height: 45vh;
     background: #02bdbc;
     text-align: center;
     font-family: PThin;
