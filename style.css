@@ -322,7 +322,7 @@ navbar ul li a:hover
 }
 #fifth_block
 {
-    height: 120vh;
+    height: 115vh;
     min-height: 650px;
 }
 form
@@ -386,6 +386,7 @@ footer
     background: #02bdbc;
     text-align: center;
     font-family: PThin;
+    margin-top: 5rem;
 }
 .footer_div
 {
