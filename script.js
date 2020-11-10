@@ -128,7 +128,8 @@ function fsubmit()
         url: "http://172.105.52.119/queries/",
         type: "POST",
         contentType: "application/json",
-        headers: {'Access-Control-Allow-Origin':'*'},
+        headers: {'Access-Control-Allow-Origin':'*', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+                 'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'},
         data: JSON.stringify(formdata),
         success: function (response) {
             $("#response").html("Thank you for taking out time and filling the form.<br> We have recorded your response and will be contacting you within a day or two");
